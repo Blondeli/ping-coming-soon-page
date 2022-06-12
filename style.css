@@ -55,7 +55,7 @@ main>p {
 }
 
 /* Notify me form */
-#error-box {
+form #error-box {
   margin-bottom: 0.625rem;
   position: relative;
 }
@@ -78,13 +78,18 @@ form #email:focus {
 
 
 form #error-message {
-  bottom: -20px;
+  bottom: -17px;
   color: var(--error-color);
   font-size: 0.625rem;
+  font-style: italic;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
   width: 100%;
+}
+
+form #error-margin {
+  margin-bottom: 2.5rem;
 }
 
 form #submit-btn {
@@ -191,7 +196,7 @@ footer>p {
     grid-template-columns: 2fr 1fr;
   }
 
-  #error-box {
+  form #error-box {
     margin-bottom: 0rem;
   }
 
@@ -204,6 +209,10 @@ footer>p {
     left: 2rem;
     text-align: start;
     transform: translateX(0);
+  }
+
+  form #error-margin {
+    display: none;
   }
   
   form #submit-btn {
