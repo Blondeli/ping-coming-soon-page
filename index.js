@@ -1,17 +1,19 @@
 // Create function to display error message
 function displayErrorMessage(event) {
-  // event.preventDefault();
+  let errorMessage = document.querySelector("#error-message");
+
   // Check email
   let email = document.querySelector("form").elements["email"].value;
   let error;
   if (email.length === 0) {
     error = true;
+    errorMessage.innerHTML = "Whoops! It looks like you forgot to add your email";
   } else if (!(email.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))) {
     error = true;
+    errorMessage.innerHTML = "Please provide a valid email address";
   }
 
   // Display error message
-  let errorMessage = document.querySelector("#error-message");
   errorMessage.classList.remove("hide");
   let errorMargin = document.querySelector("#error-margin");
   errorMargin.classList.remove("hide");
