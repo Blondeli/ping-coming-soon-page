@@ -55,10 +55,14 @@ main>p {
 }
 
 /* Notify me form */
+#error-box {
+  margin-bottom: 0.625rem;
+  position: relative;
+}
+
 form #email {
   border: 1px solid var(--primary-active-color);
   border-radius: 28px;
-  margin-bottom: 0.625rem;
   padding: 0.625rem 2rem;
   width: 100%;
 }
@@ -67,9 +71,20 @@ form #email::placeholder {
   color: var(--primary-active-color);
 }
 
+form #email:focus {
+  border: 1px solid var(--primary-color);
+  outline: 1px solid var(--primary-color);
+}
+
+
 form #error-message {
+  bottom: -20px;
   color: var(--error-color);
   font-size: 0.625rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 form #submit-btn {
@@ -176,10 +191,19 @@ footer>p {
     grid-template-columns: 2fr 1fr;
   }
 
+  #error-box {
+    margin-bottom: 0rem;
+  }
+
   form #email {
     font-size: 1rem;
-    margin-bottom: 0rem;
     padding: 1.125rem 2rem;
+  }
+
+  form #error-message {
+    left: 2rem;
+    text-align: start;
+    transform: translateX(0);
   }
   
   form #submit-btn {
