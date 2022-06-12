@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
-
+  
   <!-- Link font styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,48 @@
 </head>
 <body>
 
-  We are launching soon!
+  <main>
+    <!-- Main text -->
+    <h1>PING<span>.</span></h1>
+    <h2>
+      <span>We are launching</span> soon!
+    </h2>
+    <p>
+      Subscribe and get notified
+    </p>
 
-  Subscribe and get notified
+    <!-- Notify me form -->
+    <form>
+      <div id="error-box">
+        <input type="text" name="email" id="email" placeholder="Your email address..." autocomplete="off">
+        <p id="error-message" class="hide">
+          Please provide a valid email address
+        </p>
+      </div>
+      <input type="submit" value="Notify Me" id="submit-btn">
+    </form>
 
-  Notify Me
+    <!-- Hero image -->
+    <img src="images/illustration-dashboard.png" alt="Hero image" id="hero-img">
+  </main>
 
-  &copy; Copyright Ping. All rights reserved.
+  <!-- Footer -->
+  <footer>
+    <div id="social-media-icons">  
+      <div class="icon-box">
+        <img src="images/facebook.svg" alt="Facebook icon" id="facebook-icon" class="icon">
+      </div>
+      <div class="icon-box">
+        <img src="images/twitter.svg" alt="Twitter icon" id="twitter-icon" class="icon">
+      </div>
+      <div class="icon-box">
+        <img src="images/instagram.svg" alt="Instagram icon" id="instagram-icon" class="icon">
+      </div>
+    </div>
+    
+    <p>
+      &copy; Copyright Ping. All rights reserved.
+    </p>
+  </footer>
 </body>
 </html>

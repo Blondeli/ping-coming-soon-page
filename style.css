@@ -8,12 +8,140 @@
   --primary-color: hsl(223, 87%, 63%);
   --primary-active-color: hsl(223, 100%, 88%);
   --error-color: hsl(354, 100%, 66%);
-  --text-color: hsl(0, 0%, 59%);
-  --accent-color: hsl(209, 33%, 12%);
+  --accent-color: hsl(0, 0%, 59%);
+  --text-color: hsl(209, 33%, 12%);
   --button-shadow: 0 5px 10px 2px rgba(76, 123, 243, 0.23);
 }
 
 body {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1.25rem;
+  min-height: 100vh;
+}
+
+main {
+  padding: 5rem 2.25rem;
+  text-align: center;
+}
+
+/* Main text */
+main>h1 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+main>h1 span {
+  color: var(--primary-color);
+}
+
+main>h2 {
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+main>h2 span {
+  color: var(--accent-color);
+  font-weight: 300;
+}
+
+main>p {
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Notify me form */
+form #email {
+  border: 1px solid var(--primary-active-color);
+  border-radius: 28px;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem 2rem;
+  width: 100%;
+}
+
+form #email::placeholder {
+  color: var(--primary-active-color);
+}
+
+form #error-message {
+  color: var(--error-color);
+  font-size: 0.625rem;
+}
+
+form #submit-btn {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 28px;
+  box-shadow: var(--button-shadow);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+}
+
+form #submit-btn:hover {
+  background-color: #7096F5;
+  cursor: pointer;
+}
+
+/* Hero image */
+#hero-img {
+  margin: 4.5rem 0 7.5rem 0;
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  margin-bottom: 2.25rem;
+  margin-top: auto;
+  text-align: center;
+}
+
+#social-media-icons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.icon-box {
+  align-items: center;
+  border: 1px solid rgba(76, 123, 243, 0.15);
+  border-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  width: 32px;
+}
+
+.icon-box:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.icon {
+  filter: invert(38%) sepia(97%) saturate(599%) hue-rotate(191deg) brightness(102%) contrast(91%);
+  width: 16px;
+  transition: all 200ms ease-in-out;
+}
+
+.icon-box:hover>.icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(104%) contrast(106%);
+}
+
+footer>p {
+  color: var(--accent-color);
+  font-size: 0.625rem;
+  margin-top: 1.75rem;
+}
+
+/* Class to hide elements */
+.hide {
+  display: none;
 }
